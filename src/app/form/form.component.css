@@ -1,0 +1,8 @@
+p {
+  background: #ddd;
+  padding: 8px;
+  border-radius: 8px;
+}
+p label {
+  font-weight: bold;
+}
