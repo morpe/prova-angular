@@ -1,22 +1,15 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <h1>{{title}}</h1>
-    </div>
-    <div class="row">
-        <p>
-            <a href="https://youtu.be/d5zm4HGzkvs?t=530" class="hu" target="_blank">Tutorial!!</a>
-        </p>
-    </div>
-    <div class="row">
-        <div class="col-xs-10">
-            <app-form></app-form>
+        <div>
+            <h1>{{title}}</h1>
+
         </div>
     </div>
-</div>
-<hr>
-<div class="container">
     <div class="row">
-        <div class="col-xs-10">
+        <div class="col-4">
+            <app-form (formUsers)='appGetUser($event)'></app-form>
+        </div>
+        <div class="col-8">
             <app-table [table_user_input]="appUser"></app-table>
         </div>
     </div>
@@ -39,6 +32,6 @@ quini per table.component: tableDati, tableUsers...
 il decoretor Input nelle parentesi permette di inserire un nome e quindi potrebbe eeesere @Input('talbeDatiIn') tableDati:[nome:string]
 ma dice che è sconsigliabile... nel caso di un Input si potrebbe usare "In" nel nome tableInDati
 
-
-
 -->
+
+https://youtu.be/d5zm4HGzkvs

@@ -18,4 +18,13 @@ export class AppComponent {
 
   ];
 
+  appGetUser(event: { nome: string, anno: number, lavoro: string, fobie: string }) {
+    this.appUser.push( {
+      nome: event.nome,
+      anno: event.anno,
+      lavoro: event.lavoro,
+      fobie: event.fobie
+    } )
+  }
+
 }

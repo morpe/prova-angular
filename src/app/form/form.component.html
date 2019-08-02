@@ -1,22 +1,22 @@
 <div class="form-group">
     <p>
         <label for="" claas="b4-">Name</label>
-        <input type="text" class="form-control" name='nome' (onclick)="keyup()">
+        <input type="text" class="form-control" name='nome' #nome>
     </p>
     <p>
         <label for="" claas="b4-">Anno</label>
-        <input type="text" class="form-control" name='anno'>
+        <input type="text" class="form-control" name='anno' #anno>
     </p>
     <p>
         <label for="" claas="b4-">Lavoro</label>
-        <input type="text" class="form-control" name='lavoro'>
+        <input type="text" class="form-control" name='lavoro' #lavoro>
     </p>
     <p>
         <label for="" claas="b4-">Cosa desideri?</label>
-        <input type="text" class="form-control" name='fobie'>
+        <input type="text" class="form-control" name='fobie' #fobie>
     </p>
     <p>
-        <button class='btn btn-primary'>Save!</button>
+        <button class='btn btn-primary' (click)="formAddUser(nome,anno,lavoro,fobie)">Save!</button>
     </p>
 
 </div>
