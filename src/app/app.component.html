@@ -17,7 +17,28 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-10">
-            <app-table></app-table>
+            <app-table [table_user_input]="appUser"></app-table>
         </div>
     </div>
 </div>
+
+<!--
+
+in questo file siamo dentro app.component, lui carica i componenti form.component e table.component
+le informazioni negli altri componenti da app.comoponent non sono direttamente ragiungibili per raigoni di sicurezza.
+
+i dati tipo un array di utenti dovrebbero essere gestiti da app.component 
+quindi per visualizare i dati in un tabella su table.component serve implementare un input in table.component
+
+es: table.component
+@Input() dati:[qualcosa:string]
+
+per non perdersi in questo giro di dati-proprieta tra i componenti adotterei dei nomi che rispecchino il posto in cui sono dichiarati
+tipo per app.component le variabili o altro potrebbero essere appUser. appDati, appQualcosa...
+quini per table.component: tableDati, tableUsers...
+il decoretor Input nelle parentesi permette di inserire un nome e quindi potrebbe eeesere @Input('talbeDatiIn') tableDati:[nome:string]
+ma dice che è sconsigliabile... nel caso di un Input si potrebbe usare "In" nel nome tableInDati
+
+
+
+-->

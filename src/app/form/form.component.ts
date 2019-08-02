@@ -9,6 +9,10 @@ export class FormComponent implements OnInit {
 
   constructor() { }
 
+  keyup(){
+    console.log("keyup!");
+  }
+
   ngOnInit() {
   }
 
