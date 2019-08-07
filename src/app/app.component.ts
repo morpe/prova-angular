@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
+  
   title = 'Oreficool';
 
   constructor(){
     console.log("constructor!");
-  }
-
-  ngOniInit(){
-    console.log("on init!");
   }
 
   appUser = [
