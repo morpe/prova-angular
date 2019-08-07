@@ -10,7 +10,7 @@
             <app-form (formUsers)='appGetUser($event)'></app-form>
         </div>
         <div class="col-8">
-            <app-table [table_user_input]="appUser"></app-table>
+            <app-table [table_user_input]="appUser" (click)="appBuryUser($event)" ></app-table>
         </div>
     </div>
 </div>

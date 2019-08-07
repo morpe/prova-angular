@@ -1,16 +1,23 @@
 <div>
     <table class="table">
         <tr>
+            <th>#</th>
             <th>Nome</th>
             <th>Anno</th>
             <th>Lavoro</th>
             <th>Cosa desidera</th>
+            <th>Action</th>
         </tr>
-        <tr *ngFor="let human of tableUsers">
+        <tr *ngFor="let human of tableUsers; let i = index" >
+
+            <td>{{i+1}}</td>
             <td>{{human.nome}}</td>
             <td>{{human.anno}}</td>
             <td>{{human.lavoro}}</td>
             <td>{{human.fobie}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="tableKillUser(i)">Kill</button>
+            </td>
         </tr>
     </table>
 </div>

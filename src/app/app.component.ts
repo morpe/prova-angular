@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Oreficool';
+
+  constructor(){
+    console.log("constructor!");
+  }
+
+  ngOniInit(){
+    console.log("on init!");
+  }
 
   appUser = [
     { nome: 'neno', anno: 666, lavoro: "corre", fobie: "del buio" },
@@ -15,8 +23,9 @@ export class AppComponent {
     { nome: 'fano', anno: 98711, lavoro: "interprete di design", fobie: "non fare questo lavoro" },
     { nome: 'peto', anno: 157447, lavoro: "chiriurgo", fobie: "fare l'interprete di design" },
     { nome: 'kono', anno: 1879547, lavoro: "sviluppatore di vlc", fobie: "uccidcere tutti quelli che usano vlc" }
-
   ];
+
+
 
   appGetUser(event: { nome: string, anno: number, lavoro: string, fobie: string }) {
     this.appUser.push( {
@@ -25,6 +34,12 @@ export class AppComponent {
       lavoro: event.lavoro,
       fobie: event.fobie
     } )
+  }
+
+  appBuryUser(event){
+    let hu = true;
+    console.log("bury",event);
+    this.appUser.splice(event,1);
   }
 
 }
